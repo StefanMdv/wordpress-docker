@@ -77,25 +77,25 @@ http://<YOUR_SERVER_IP>:8080
 ### Starting the services
 
 ```bash
-docker-compose up -d
+docker compose up -d
 ```
 
 ### Stopping the services
 
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ### Restarting the services
 
 ```bash
-docker-compose restart
+docker compose restart
 ```
 
 ### Viewing logs
 
 ```bash
-docker-compose logs -f
+docker compose logs -f
 ```
 
 ---
@@ -219,7 +219,7 @@ After starting the setup:
 4. Restart containers:
 
 ```bash
-docker-compose restart
+docker compose restart
 ```
 
 5. Ensure that all data is still available after restart
