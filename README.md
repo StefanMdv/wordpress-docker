@@ -1,5 +1,9 @@
 # WordPress Docker Setup
 
+## Description
+
+This repository contains a minimal Docker-based setup to run a WordPress instance together with a MySQL database.
+
 ## Table of Contents
 
 * [Description](#description)
@@ -9,10 +13,6 @@
 * [Notes](#notes)
 
 ---
-
-## Description
-
-This repository contains a minimal Docker-based setup to run a WordPress instance together with a MySQL database.
 
 ### Purpose
 
@@ -42,14 +42,17 @@ Make sure the following tools are installed:
 
 ### Setup
 
-1. Clone the repository:
+1. Clone the repository
+
+2. Go inside the repository:
 
 ```bash
-git clone <YOUR_REPOSITORY_URL>
-cd <YOUR_REPOSITORY_NAME>
+cd wordpress-docker
 ```
 
-2. Create a `.env` file in the project root:
+3. Create a `.env` file in the project root renaming the `example.env` file into `.env`.
+> [!CAUTION]
+> Make sure that you changed all sensitive data 
 
 ```env
 DB_NAME=<db_name>
@@ -58,13 +61,13 @@ DB_PASSWORD=<db_password>
 DB_ROOT_PASSWORD=<db_root_password>
 ```
 
-3. Start the containers:
+4. Start the containers:
 
 ```bash
 docker-compose up -d
 ```
 
-4. Open WordPress in your browser:
+5. Open WordPress in your browser:
 
 ```
 http://<YOUR_SERVER_IP>:8080
@@ -193,7 +196,7 @@ You can modify the setup by:
 
 * Do not store passwords or secrets in the repository
 * Always use environment variables for sensitive data
-* The containers are configured with `restart: always`
+* The containers are configured with `restart: unless-stopped`
 * WordPress will be available on port `8080`
 * Data persists across restarts due to Docker volumes
 
