@@ -51,15 +51,9 @@ cd wordpress-docker
 ```
 
 3. Create a `.env` file in the project root renaming the `example.env` file into `.env`.
+
 > [!CAUTION]
 > Make sure that you changed all sensitive data 
-
-```env
-DB_NAME=<db_name>
-DB_USER=<db_username>
-DB_PASSWORD=<db_password>
-DB_ROOT_PASSWORD=<db_root_password>
-```
 
 4. Start the containers:
 
